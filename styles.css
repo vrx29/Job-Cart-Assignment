@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .item-container {
+    width: 100%;
+  }
+  .content-container {
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    padding: 0 1rem;
+  }
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+  }
+  .item-card {
+    align-self: center;
+  }
+  .bill-container {
+    width: 100%;
+  }
+  .card {
+    max-height: 200px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .content-container {
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    padding: 0 1rem;
+  }
+  .item-container {
+    width: 100%;
+  }
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .bill-container {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .item-container {
+    width: 70%;
+  }
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .sidebar {
+    width: 60px;
+  }
+  .hide {
+    width: 0;
+  }
+  .bill-container {
+    width: 30%;
+  }
+}
+
+/* Setting up main container */
+.head-container {
+  display: flex;
+  background-color: #f7f7f7;
+}
+/* Sidebar  */
+.sidebar {
+  width: 0;
+  height: 100vh;
+  transition: 0.3s;
+  background-color: #fff;
+  box-shadow: rgba(0, 0.05, 0, 0) 0px 1px 0px 0px;
+}
+.hide {
+  width: 60px;
+  transition: 0.2s;
+}
+.sidebar-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.icon {
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #6d28d9;
+}
+.icon:active {
+  border-left: 5px solid #6d28d9;
+}
+.icon:focus {
+  border-left: 5px solid #6d28d9;
+}
+.sidebar-container img {
+  width: 50%;
+}
+
+.center-icons {
+  display: flex;
+  flex-direction: column;
+}
+.main-container {
+  width: 95%;
+}
+.header {
+  text-align: center;
+  padding: 2rem 0;
+  position: relative;
+}
+/* Sidebar Toggle icon */
+.btn-sidebar {
+  position: absolute;
+  top: 0;
+  left: 5;
+  height: 40px;
+  width: 40px;
+  padding: 10px;
+}
+.btn-sidebar img {
+  width: 100%;
+}
+
+/* Main Items container  */
+.content-container {
+  display: flex;
+  padding: 0 1rem;
+}
+
+.item-category {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  border: 1px solid #c4b5fd;
+}
+
+.category-btn {
+  width: 100%;
+  height: 30px;
+  border: none;
+}
+.category-btn:active {
+  background-color: #6d28d9;
+  color: #fff;
+}
+.category-btn:focus {
+  background-color: #6d28d9;
+  color: #fff;
+}
+
+/* Items grid  */
+.card {
+  display: flex;
+  max-height: 200px;
+}
+
+.img-container {
+  width: 40%;
+}
+.img-container img {
+  width: 100%;
+  height: 100%;
+}
+
+.item-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-left: 2rem;
+}
+
+.btn {
+  height: 40px;
+  width: 60px;
+  font-size: 1.5rem;
+  border: transparent;
+}
+
+.btn-qty {
+  background-color: transparent;
+  color: #6d28d9;
+}
+.btn-dec,
+.btn-inc {
+  width: 50px;
+  color: #6d28d9;
+}
+
+/* Bill Details  */
+.bill-head {
+  padding: 0 0.5rem;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.bill-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0.5rem;
+}
+
+.bill-item:first-child {
+  padding: 1rem 0.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.bill {
+  padding: 2rem 0.5rem;
+}
+
+.bill-data {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+}
+
+.btn-pay-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn-pay {
+  height: 42px;
+  width: 60%;
+  background-color: #6d28d9;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
